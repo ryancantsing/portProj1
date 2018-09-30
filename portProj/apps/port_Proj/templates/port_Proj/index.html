@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolius | Stave off Meaninglessness Today! |</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/index.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper" style="height: 100%">
+        <div class="header row">
+            <div class="helloDiv col-lg-6 col-sm-6 col-xs-12">
+                <h3>Hello and Welcome to Portfolius!</h3>
+            </div>
+            <div class="explanationDiv col-lg-6 col-sm-6 col-xs-12" >
+                <h3>This is a portfolio project by Ryan Riddell</h3>
+            </div>
+        </div>
+        <div class="mainDiv row">
+            <div class="backgroundOpacityDiv col-lg-12 col-sm-12 col-xs-12">
+                <div class="logoDiv col-lg-12 col-sm-12 col-xs-12">
+                    <p id="mainText">PORTFOLIUS</p>
+                    <p id="subText" style="font-weight: bold">The Tool Of Relevance in a World Full of Opinions That Aren't Yours</p>
+                </div>
+            </div>
+        </div>
+        <div class="descriptionDiv row">
+            <div class="descriptionSection col-sm-6 col-xs-12" >
+                <h3>You are now on your journey to be super cool.</h3>
+            </div>
+            <div class="descriptionSection col-sm-6 col-xs-12" >
+                <h3>There are many reasons to join us, but the main reason is clear:</h3>
+                <ul>
+                    <li>Post are important, and you are cool for posting</li>
+                    <li>If you do not post, you are irrelevant and weak</li>
+                    <li>Your grandkids don't listen to you because you need a higher post score</li>
+                    <li>You will automatically become cool if you sign up</li>
+                    <li>You have to believe that Barack Obama is inexplicably still in office so you have someone to complain about</li>
+                    <li>Raising your status on Portfolius will make people pay attention</li>
+                </ul>
+            </div>
+        </div>
+        <div class="comeOnOver row">
+            <div class="joinTheSqwad col-sm-12 col-xs-12 col-lg-12" >
+                <h1 style="margin-right: 60px">Want to Join the Squad? You can register!</h1>
+                    <div class="registerBenefits">
+                        <ul>
+                            <p style="margin-left: 50px">Benefits Include:</p>
+                            <li>Unlimited Posting Opportunities</li>
+                            <li>Ability to Blame Others For Your Mistakes</li>
+                            <li>Affirmation of Your Posting Ability</li>
+                            <li>An amalgam of People Just Like You</li>
+                        </ul>
+                        <button type="button" id="revealRegister" class="btn btn-primary" data-toggle="modal" data-target="#registerModal"> Join Today!</button><br>
+                        <h2>Already Registered? Please Login</h2>
+                        <button type="button" id="revealLogin" class="btn btn-primary" data-toggle="modal" data-target="#loginModal"> Welcome Back!</button><br>
+
+                    </div>
+                </div>
+        </div>
+                <div id="loginForm" class="col-sm-6 col-xs-12" style="visibility: hidden">
+                    <h3>Time to rejoin the Flock</h3>
+                    <form action="/login" method="POST">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="username" name="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" name="password">
+                        </div>
+                        <input type="submit" value="let's go back fam!">
+                    </form>
+                    <button id="loginCancel" class="btn btn-primary">Cancel</button>
+                </div>
+        </div>
+    <div class="modal" id="registerModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Register For Portfolius</h5>
+                </div>
+                <div class="modal-body">
+                            <div class="styleModal">
+                                <form action="/register" method="POST">
+                                    <div class="form-group">
+                                        <label for="name">First Name</label>
+                                        <input type="text" name="first_name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name">Last Name</label>
+                                        <input type="text" name="last_name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="username">Username</label>
+                                        <input type="text" name="username">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input type="password" name="password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password_confirm">Confirm Password</label>
+                                        <input type="password" name="password_confirm">
+                                    </div>
+                                    <input class="btn btn-primary join-Squad" type="submit" value="Join the Squad!">
+                                </form>
+                            </div>
+                        </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="modal" id="loginModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Welcome Back to the Fold</h5>
+                    </div>
+                    <div class="modal-body">
+                                <div class="styleModal">
+                                        <form action="/login" method="POST">
+                                            <div class="form-group">
+                                                <label for="username">Username</label>
+                                                <input type="username" name="username">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="password">Password</label>
+                                                <input type="password" name="password">
+                                            </div>
+                                            <input type="submit" value="let's go back fam!">
+                                        </form>
+                                </div>
+                            </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+              </div>
+    </body>
+</html>

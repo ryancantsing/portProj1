@@ -1,0 +1,42 @@
+.header-user-row{
+    background-color: blue;
+    display: inline-block;
+    height: 100px;
+    width: 100%;
+}
+.user-logo-div{
+    display: inline-block;
+    background-color: purple;
+    height: 95px;
+}
+.user-info-div{
+    display: inline-block;
+    background-color: green;
+    height: 95px;
+}
+.logout-div{
+    display: inline-block;
+    background-color: teal;
+    height: 95px;
+}
+.user-main-row{
+    height: 300px;
+    display: inline-block;
+    width: 100%;
+}
+.left-side{
+    display: inline-block;
+    background-color: blue;
+    height: 300px;
+}
+.right-side{
+    display: inline-block;
+    background-color: red;
+    height: 300px;
+}
+.user-wall-row{
+    display: inline-block;
+    background-color: lightblue;
+    height: 300px;
+    width: 100%;
+}
